@@ -1,4 +1,5 @@
 🍹 Juice Shop System (OOP)
+
 💡 Core Idea
 
 A juice shop system that allows:
@@ -12,6 +13,7 @@ Managing orders and employees
 
 
 🧱 System Design (Classes):
+
 👤 1. Customer
 
 Represents the person placing an order.
@@ -27,6 +29,7 @@ Functions:
 placeOrder()
 
 🧑‍🍳 2. Employee
+
 Manages the system and orders.
 
 Properties:
@@ -41,6 +44,7 @@ processOrder()
 addJuiceToMenu()
 
 🧃 3. Juice (Base Class)
+
 The most important class in the system.
 
 Properties:
@@ -56,6 +60,7 @@ calculatePrice()
 displayJuiceInfo()
 
 🍹 4. Menu
+
 Stores available juices.
 
 Properties:
@@ -70,6 +75,7 @@ removeJuice()
 searchJuice()
 
 🧾 5. Order
+
 Represents a customer order.
 
 Properties:
@@ -87,6 +93,7 @@ calculateTotal()
 showOrderDetails()
 
 🏪 6. JuiceShop (Main System)
+
 The main controller of the system.
 
 Properties:
@@ -103,6 +110,7 @@ manageMenu()
 checkoutOrder()
 
 🍓 7. JuiceBuilder
+
 Allows the customer to create a custom juice.
 
 Properties:
