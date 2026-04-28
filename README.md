@@ -5,7 +5,7 @@
 
 A juice shop system that allows:
 
-Displaying a menu of juices Creating customer orders Choosing size (Small / Medium / Large) Calculating prices Creating custom juices (Juice Builder) Managing orders and employees
+Displaying a menu of juices, Creating customer orders, Choosing size (Small / Medium / Large), Calculating prices, Creating custom juices (Juice Builder), Managing orders and employees
 
 
 ##  🧱 System Design (Classes):
