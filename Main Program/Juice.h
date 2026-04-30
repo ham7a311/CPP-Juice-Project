@@ -28,7 +28,7 @@ class Juice {
                 price = basePrice + basePrice;
                 return price;
             } else {
-                cout << "Please enter a valid charchter(S / M / L)";
+                return -1
             }
             return 0;
         }
