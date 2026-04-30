@@ -6,7 +6,7 @@ using namespace std;
 
 class Juice {
     private:
-        string juiceName;           
+        string juiceName;           // "Mango", "Strawberry", "Banana", "Pineapple", "Mint", "Ice"
         double basePrice, price;    // basePrice -> the starting price for every juice, price -> final price (after choosing size)
         char size;      // size of juice
 
