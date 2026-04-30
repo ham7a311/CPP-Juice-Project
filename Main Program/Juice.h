@@ -6,9 +6,9 @@ using namespace std;
 
 class Juice {
     private:
-        string juiceName;
-        double basePrice, price;
-        char size;
+        string juiceName;           
+        double basePrice, price;    // basePrice -> the starting price for every juice, price -> final price (after choosing size)
+        char size;      // size of juice
 
     public:
         Juice(string juiceName, double basePrice, char size) {
@@ -19,16 +19,25 @@ class Juice {
 
         double calculatePrice() {
             if(size == 'S' || size == 's') {
-                price = basePrice;
-                return price;
+                price = basePrice;      // if cup size is SMALL, price = basePrice (price here is without ingredients, only size)
+                return price;           // return price
             }else if (size == 'M' || size == 'm') {
-                price = basePrice + (basePrice * 0.5);
-                return price;
+                price = basePrice + (basePrice * 0.5);      // if cup size is MEDIUM, price will be 50% more
+                return price;                               // return price
             }else if(size == 'L' || size == 'l') {
-                price = basePrice + basePrice;
-                return price;
+                price = basePrice + basePrice;              // if cup size is LARGE, price will be double
+                return price;                               // return price
             } else {
-                return -1;
+                /*  
+                 if size is not valid return -1
+                 then handle the logic in main()
+                 how to handle logic in main:
+                                                - Call  calculatePrice(), and assign it to a variable
+                                                - if that variable is -1    ===>    cout an error
+                                                - else   ===>   continue the program
+                */
+                
+                return -1;                                 
             }
         }
 
