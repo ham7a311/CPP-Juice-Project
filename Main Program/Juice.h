@@ -1,6 +1,7 @@
 #ifndef juice_h
 #define juice_h
 
+#include <iostream>
 using namespace std;
 
 class Juice {
