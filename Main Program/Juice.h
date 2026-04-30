@@ -20,13 +20,17 @@ class Juice {
         double calculatePrice() {
             if(size == 'S' || size == 's') {
                 price = basePrice;
+                return price;
             }else if (size == 'M' || size == 'm') {
                 price = basePrice + (basePrice * 0.5);
-            }else {
+                return price;
+            }else if(size == 'L' || size == 'l') {
                 price = basePrice + basePrice;
+                return price;
+            } else {
+                cout << "Please enter a valid charchter(S / M / L)";
             }
-
-            return price;
+            return 0;
         }
 
 };
