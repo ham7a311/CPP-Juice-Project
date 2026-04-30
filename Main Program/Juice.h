@@ -19,8 +19,8 @@ class Juice {
 
         double calculatePrice() {
             if(size == 'S' || size == 's') {
-                price = basePrice;      // if cup size is SMALL, price = basePrice
-                return price;           // return price
+                price = basePrice;                          // if cup size is SMALL, price = basePrice
+                return price;                               // return price
             }else if (size == 'M' || size == 'm') {
                 price = basePrice + (basePrice * 0.5);      // if cup size is MEDIUM, price will be 50% more
                 return price;                               // return price
