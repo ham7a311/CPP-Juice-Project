@@ -1,7 +1,6 @@
 #ifndef juice_h
 #define juice_h
 
-#include <iostream>
 using namespace std;
 
 class Juice {
@@ -28,9 +27,8 @@ class Juice {
                 price = basePrice + basePrice;
                 return price;
             } else {
-                return -1
+                return -1;
             }
-            return 0;
         }
 
 };
