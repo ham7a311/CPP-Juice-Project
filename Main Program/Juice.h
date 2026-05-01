@@ -1,5 +1,5 @@
-#ifndef juice_h
-#define juice_h
+#ifndef JUICE_H
+#define JUICE_H
 
 #include <iostream>
 using namespace std;
