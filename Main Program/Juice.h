@@ -30,8 +30,8 @@ class Juice {
             } else {
                 /*  
                  if size is not valid return -1
-                 then handle the logic in main()
-                 how to handle logic in main:
+                 then handle the logic in displayJuiceInfo()
+                 how to handle logic in displayJuiceInfo():
                                                 - Call  calculatePrice(), and assign it to a variable
                                                 - if that variable is -1    ===>    cout an error
                                                 - else   ===>   continue the program
@@ -40,6 +40,7 @@ class Juice {
                 return -1;                                 
             }
         }
+        void displayJuiceInfo(){};
 
 };
 
