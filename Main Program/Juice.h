@@ -7,7 +7,7 @@ using namespace std;
 class Juice {
     private:
         string juiceName;           // "Mango", "Strawberry", "Banana", "Pineapple", "Mint", "Ice"
-        double basePrice, price;    // basePrice -> the starting price for every juice, price -> final price (after choosing size)
+        double basePrice, price;    // basePrice -> the starting price for every juice(this is decided in menu), price -> final price (after choosing size)
         char size;      // size of juice
 
     public:
@@ -25,7 +25,7 @@ class Juice {
                 price = basePrice + (basePrice * 0.5);      // if cup size is MEDIUM, price will be 50% more
                 return price;                               // return price
             }else if(size == 'L' || size == 'l') {
-                price = basePrice + basePrice;              // if cup size is LARGE, price will be double
+                price = basePrice * 2;              // if cup size is LARGE, price will be double
                 return price;                               // return price
             } else {
                 /*  
@@ -40,7 +40,19 @@ class Juice {
                 return -1;                                 
             }
         }
-        void displayJuiceInfo(){};
+        void displayJuiceInfo(){
+
+            double finalPrice = calculatePrice();
+            
+            if(finalPrice == -1) cout << "Something went wrong (Invalid size)";
+            else {
+                    cout << this->juiceName << endl;
+                    cout << this->size << endl;
+                    cout << finalPrice << endl;
+            }
+            
+            
+        };
 
 };
 
