@@ -8,7 +8,7 @@ class Juice {
     private:
         string juiceName;           // "Mango", "Strawberry", "Banana", "Pineapple", "Mint", "Ice"
         double basePrice, price;    // basePrice -> the starting price for every juice(this is decided in menu), price -> final price (after choosing size)
-        char size;      // size of juice
+        char size;      // size of juice (S/M/L or s/m/l)
 
     public:
         Juice(string juiceName, double basePrice, char size) {
@@ -42,15 +42,14 @@ class Juice {
         }
         void displayJuiceInfo(){
 
-            double finalPrice = calculatePrice();
+            double finalPrice = calculatePrice();           // call caculatePrice() to get the price variable and assign it to finalPrice
             
             if(finalPrice == -1) cout << "Something went wrong (Invalid size)";
             else {
-                    cout << this->juiceName << endl;
-                    cout << this->size << endl;
-                    cout << finalPrice << endl;
+                    cout << this->juiceName << endl;        // display juiceName
+                    cout << this->size << endl;            // display juice size
+                    cout << finalPrice << endl;            // display finalPrice (price after adjusting and checking size)
             }
-            
             
         };
 
