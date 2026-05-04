@@ -104,8 +104,8 @@ Each ingredient adds a small extra cost to the final price
 
 1️⃣ Show Menu Display all available juices with their prices
 
-2️⃣ Create Order Enter customer name Choose juice Select size Calculate price Save order
+2️⃣ Create Order, Enter customer name, Choose juice, Select size, Calculate price, Save order
 
-3️⃣ Juice Builder (Optional) Select ingredients Automatically calculate price Create a custom juice Add it to the order
+3️⃣ Juice Builder (Optional), Select ingredients Automatically, calculate price, Create a custom juice, and Add it to the order
 
-4️⃣ Checkout Display final bill Update order status to Completed
+4️⃣ Checkout, Display final bill, Update order status to Completed
