@@ -1,3 +1,6 @@
+#ifndef CUSTOMER_H
+#define CUSTOMER_H
+
 #include <iostream>
 using namespace std;
 
@@ -40,3 +43,4 @@ public:
         cout << "-----------------------------\n";
     }
 };
+#endif
