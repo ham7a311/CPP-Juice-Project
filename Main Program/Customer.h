@@ -12,7 +12,7 @@ private:
 
 public:
     // Constructor----------------------------------------------------------------
-    Customer(string ID = "No ID", string n = "No name", string num = "00000000") {
+    Customer(string ID, string n, string num = "00000000") {
         customerID = ID;
         name = n;
         phoneNumber = num;
