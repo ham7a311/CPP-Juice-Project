@@ -7,7 +7,7 @@ using namespace std;
 class Juice {
     private:
         string juiceName;           // "Mango", "Strawberry", "Banana", "Pineapple", "Mint", "Ice"
-        double basePrice, price;    // basePrice -> the starting price for every juice(this is decided in menu), price -> final price (after choosing size)
+        double basePrice;    // basePrice -> the starting price for every juice(this is decided in menu)
         char size;      // size of juice (S/M/L or s/m/l)
 
     public:
@@ -19,14 +19,11 @@ class Juice {
 
         double calculatePrice() {
             if(size == 'S' || size == 's') {
-                price = basePrice;                          // if cup size is SMALL, price = basePrice
-                return price;                               // return price
-            }else if (size == 'M' || size == 'm') {
-                price = basePrice + (basePrice * 0.5);      // if cup size is MEDIUM, price will be 50% more
-                return price;                               // return price
-            }else if(size == 'L' || size == 'l') {
-                price = basePrice * 2;              // if cup size is LARGE, price will be double
-                return price;                               // return price
+                return basePrice;                               //if the cup size is SMALL, price will be same, return basePrice
+            }else if (size == 'M' || size == 'm') {  
+                return basePrice + (basePrice * 0.5);           // if cup size is MEDIUM, price will be 50% more, return basePrice + (basePrice * 0.5)
+            }else if(size == 'L' || size == 'l') {        
+                return basePrice * 2;                               // if cup size is LARGE, price will be double ,return basePrice * 2
             } else {
                 /*  
                  if size is not valid return -1
@@ -46,9 +43,9 @@ class Juice {
             
             if(finalPrice == -1) cout << "Something went wrong (Invalid size)";
             else {
-                    cout << this->juiceName << endl;        // display juiceName
-                    cout << this->size << endl;            // display juice size
-                    cout << finalPrice << endl;            // display finalPrice (price after adjusting and checking size)
+                    cout << "Juice name: " << this->juiceName << endl;        // display juiceName
+                    cout << "Size: " << this->size << endl;            // display juice size
+                    cout << "Price: " << finalPrice << endl;            // display finalPrice (price after adjusting and checking size)
             }
             
         };
