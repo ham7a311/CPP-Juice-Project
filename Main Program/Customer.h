@@ -6,25 +6,25 @@ using namespace std;
 
 class Customer {
 private:
-    string customerID;
+    int customerID;
     string name;
     string phoneNumber;
+    static int counter;
 
 public:
     // Constructor----------------------------------------------------------------
-    Customer(string ID, string n, string num = "00000000") {
-        customerID = ID;
+    Customer(string n, string num = "00000000") {
+        customerID = counter++;
         name = n;
         phoneNumber = num;
     }
 
     // Getters----------------------------------------------------------------
-    string getCustomerID() const { return customerID; }
+    int getCustomerID() const { return customerID; }
     string getName() const { return name; }
     string getPhoneNumber() const { return phoneNumber; }
 
     // Setters----------------------------------------------------------------
-    void setCustomerID(string ID) { customerID = ID; }
     void setName(string n) { name = n; }
     void setPhoneNumber(string num) { phoneNumber = num; }
 
@@ -43,4 +43,5 @@ public:
         cout << "-----------------------------\n";
     }
 };
+int Customer::counter = 1;
 #endif
