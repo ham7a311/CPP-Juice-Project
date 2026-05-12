@@ -7,7 +7,7 @@ using namespace std;
 class Menu{ //Class:Menu,  Manages a collection of juice objects available for sale.
 
 private:
-vector<juice> availableJuices; //Dynamic list to store the different juice objects.
+vector<Juice> availableJuices; //Dynamic list to store the different juice objects.
 
 public:
 void ShowMenu(){
@@ -17,7 +17,7 @@ availableJuices[i].displayJuiceInfo();
 cout<<endl;} //goes through the list and calls the display function for each juice
 };
 
-Void AddJuice(juice j){
+Void AddJuice(Juice j){
 availableJuices.push_back(j); //Adds a new juice object to the end of the availableJuices list.
 }
 
