@@ -2,7 +2,7 @@
 #define Menu_H
 #include <iostream>
 #include<vector>
-#include "Juice_H"
+#include "Juice.h"
 using namespace std;
 class Menu{ //Class:Menu,  Manages a collection of juice objects available for sale.
 
@@ -10,16 +10,16 @@ private:
 vector<Juice> availableJuices; //Dynamic list to store the different juice objects.
 
 public:
-void ShowMenu(){
-cout<<"Available Juices"<<endl;
-for (int i=0; i< availableJuices.size() ; i++){
-availableJuices[i].displayJuiceInfo();
-cout<<endl;} //goes through the list and calls the display function for each juice
+  void ShowMenu(){
+  cout<<"Available Juices"<<endl;
+  for (int i=0; i< availableJuices.size() ; i++){
+  availableJuices[i].displayJuiceInfo();
+  cout<<endl;} //goes through the list and calls the display function for each juice
 };
 
-Void AddJuice(Juice j){
-availableJuices.push_back(j); //Adds a new juice object to the end of the availableJuices list.
-}
+  void AddJuice(Juice j){
+  availableJuices.push_back(j); //Adds a new juice object to the end of the availableJuices list.
+  }
 
 void removeJuice(string name){   //Function to remove a juice based on its name.
 
