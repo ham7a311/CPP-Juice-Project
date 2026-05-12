@@ -2,6 +2,7 @@
 #define EMPLOYEE_H
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 // -------------------------- Base Class --------------------------
@@ -39,7 +40,7 @@ public:
     }
 
     // -------------------------- Additional function --------------------------
-    void displayInfo() {
+    void displayInfo const () { //const since it will display employee info with out changes
         cout << "***************************************************" << endl;
         cout << "Employee Info" << endl;
         cout << "--------------"<< endl;
