@@ -21,7 +21,24 @@ public:
   availableJuices.push_back(j); //Adds a new juice object to the end of the availableJuices list.
   }
 
-void removeJuice(string name){   //Function to remove a juice based on its name.
-
+void removeJuice(string name){//Function to remove a juice based on its name.
+  for(int i = 0; i < availableJuices.size(); i++ ){
+          if(availableJuices[i] == name) {
+              availableJuices.erase(availableJuices.begin() + i);
+              cout << "juice deleted";
+              return;
+          }
+         cout << "juice not found";
+  }
+void seaarchJuice(string name){
+    for(int i = 0; i < availableJuices.size(); i++ ){
+          if (availableJuices[i] == name) { 
+          cout<<"Juice found"<<endl;
+          availableJuices[i].displayJuiceInfo();
+          return;
+    
+}
+}
+cout<<"Juice not found";
 };
 #endif
