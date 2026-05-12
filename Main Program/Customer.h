@@ -11,6 +11,7 @@ private:
     string name;
     string phoneNumber;
     inline static int counter = 1; //becasue this class is written in a header file
+//the inline static in private because we dont want otherparts of the program to change it directly
 
 public:
     // Constructor
