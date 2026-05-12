@@ -10,7 +10,7 @@ private:
     int customerID;
     string name;
     string phoneNumber;
-    static int counter;
+    inline static int counter = 1; //becasue this class is written in a header file
 
 public:
     // Constructor
@@ -18,7 +18,7 @@ public:
         customerID = counter++;
         name = n;
         phoneNumber = num;
-        inline static int counter = 1; //becasue this class is written in a header file
+        
     }
 
     // Getters
