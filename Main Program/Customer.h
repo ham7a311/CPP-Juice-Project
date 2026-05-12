@@ -2,6 +2,7 @@
 #define CUSTOMER_H
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Customer {
@@ -12,29 +13,30 @@ private:
     static int counter;
 
 public:
-    // Constructor----------------------------------------------------------------
+    // Constructor
     Customer(string n, string num = "00000000") {
         customerID = counter++;
         name = n;
         phoneNumber = num;
+        inline static int counter = 1; //becasue this class is written in a header file
     }
 
-    // Getters----------------------------------------------------------------
+    // Getters
     int getCustomerID() const { return customerID; }
     string getName() const { return name; }
     string getPhoneNumber() const { return phoneNumber; }
 
-    // Setters----------------------------------------------------------------
+    // Setters
     void setName(string n) { name = n; }
     void setPhoneNumber(string num) { phoneNumber = num; }
 
-    // Place order----------------------------------------------------------------
-    void place_order() {
+    // Place order
+    void place_order() const { 
         cout << "Order placed by: " << name << "\n";
         cout << "Order received!\n";
     }
 
-    // Display----------------------------------------------------------------
+    // Display
     void display() const {
         cout << "-----------------------------\n";
         cout << "Customer ID : " << customerID << "\n";
@@ -43,5 +45,5 @@ public:
         cout << "-----------------------------\n";
     }
 };
-int Customer::counter = 1;
+//int Customer::counter = 1; "deleted"
 #endif
