@@ -42,7 +42,7 @@ class Menu{
         }
 
 
-        void searchJucie(string name){
+        void searchJuice(string name){
             for(int i = 0; i < availableJuice.size(); i++){
                 if(availableJuice[i].getJuiceName() == name){
                     cout << "Juice found." << endl; 
