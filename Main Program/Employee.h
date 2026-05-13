@@ -40,7 +40,7 @@ public:
     }
 
     // -------------------------- Additional function --------------------------
-    void displayInfo const () { //const since it will display employee info with out changes
+    void displayInfo() const { //const since it will display employee info with out changes
         cout << "***************************************************" << endl;
         cout << "Employee Info" << endl;
         cout << "--------------"<< endl;
