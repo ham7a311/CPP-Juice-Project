@@ -80,6 +80,7 @@ Represents a customer order.
 - `orderID`
 - `customer`
 - `list<Juice>`
+- `list<size>`
 - `totalPrice`
 - `status (Pending / Completed)`
 
