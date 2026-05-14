@@ -3,20 +3,21 @@
 
 #include "Customer.h"       // for display() function
 #include "Juice.h"          // for calculatePrice(char size) function
-#include <vector>            // to store juices and sizes
+#include <vector>
+#include <utility>          // for using pairs in the vectors to store 
 #include <iostream>
 using namespace std;
 
 class Order {
 private:
 
-    inline static int counter = 1;
-    int orderID;
-    Customer customer;      // use Customer class from Customer.h file to access display() function to display Customer Info
-    vector<Juice> juices;   // stores juices
-    vector<char> sizes;     // stores sizes(S/M/L or s/m/l)
-    double totalPrice;      // totalPrice after adjusting everything (size, juice)
-    string status;          // "pending" / "completed"
+       //the inline static in private because we dont want otherparts of the program to change it directly
+        inline static int counter = 1;      //becasue this class is written in a header file
+        int orderID;    // will be assigned to counter
+        Customer customer;      // use Customer class from Customer.h file to access display() function to display Customer Info
+        vector<pair<Juice, char>> juices;      // to store juice and size for each order
+        double totalPrice;          // totalPrice after adjusting everything (size, juice)
+        string status;      // "pending" / "completed"
 
 public:
     Order(Customer c);
