@@ -47,6 +47,10 @@ void Order::showOrderDetails() {
     cout << "Status: " << status << endl;
 }
 
-int Order::getOrderID(){
+int Order::getOrderID() const {
   return orderID;
+}
+
+void Order::completeOrder() {
+  status = "Completed";
 }
