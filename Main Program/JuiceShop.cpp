@@ -9,4 +9,13 @@ void JuiceShop::CreateOrder(Order ord){
    orders.push_back(ord); //Adding a new order to the orders vector
 }
 void JuiceShop::DisplayOrders(){
+   if(orders.empty()){
+      cout<<"There are no orders in the system yet."<<endl; //Checking first if the orders vectors empty, if not then it will start using the loop
+      return;
+         }
+   for(int i=0; i<orders.size(); i++){ // A loop to go through all of the orders using the orders vector
+     orders[i].showOrderDetails(); // shoing each order detaild using the "showOrderDetails()" function from order class
+   }
+}
+void JuiceShop::CheckOrder(int id){
    
