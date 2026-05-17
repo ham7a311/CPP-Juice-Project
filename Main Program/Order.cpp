@@ -46,3 +46,6 @@ void Order::showOrderDetails() {
     cout << "Total Price: " << calculateTotal() << endl;
     cout << "Status: " << status << endl;
 }
+int Order::GetOrderID(){
+  return orderID;
+}
