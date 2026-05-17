@@ -24,6 +24,7 @@ public:
     void addJuiceToOrder(Juice j, char size);
     double calculateTotal();
     void showOrderDetails();
+    int getOrderID();
 };
 
 #endif
