@@ -18,4 +18,6 @@ void JuiceShop::DisplayOrders(){
    }
 }
 void JuiceShop::CheckOrder(int id){
-   
+   for(int i=0; i<orders.size(); i++){
+      if(id==
+     orders[i].showOrderDetails();
