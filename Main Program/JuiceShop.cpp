@@ -19,5 +19,10 @@ void JuiceShop::DisplayOrders(){
 }
 void JuiceShop::CheckOrder(int id){
    for(int i=0; i<orders.size(); i++){
-      if(id==
-     orders[i].showOrderDetails();
+      if(id==orders[i].getOrderID()){
+       orders[i].showOrderDetails();
+         return;
+      }
+   }
+   cout<<"Order with ID"<<id<<" not found!"<<endl;
+}
