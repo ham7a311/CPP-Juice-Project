@@ -25,6 +25,7 @@ public:
     double calculateTotal();
     void showOrderDetails();
     int getOrderID();
+    void completeOrder();
 };
 
 #endif
