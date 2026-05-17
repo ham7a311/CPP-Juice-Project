@@ -3,48 +3,29 @@
 
 #include <iostream>
 #include <string>
+#include "Person.h"
 using namespace std;
 
-class Customer {
+class Customer : public Person {
 private:
     int customerID;
-    string name;
-    string phoneNumber;
     inline static int counter = 1; //becasue this class is written in a header file
 //the inline static in private because we dont want otherparts of the program to change it directly
 
 public:
     // Constructor
-    Customer(string n, string num = "00000000") {
-        customerID = counter++;
-        name = n;
-        phoneNumber = num;
-        
-    }
+    Customer(string n, string num = "00000000");
+
 
     // Getters
-    int getCustomerID() const { return customerID; }
-    string getName() const { return name; }
-    string getPhoneNumber() const { return phoneNumber; }
+    int getCustomerID() const;
 
-    // Setters
-    void setName(string n) { name = n; }
-    void setPhoneNumber(string num) { phoneNumber = num; }
 
     // Place order
-    void place_order() const { 
-        cout << "Order placed by: " << name << "\n";
-        cout << "Order received!\n";
-    }
+    void place_order() const ;
+
 
     // Display
-    void display() const {
-        cout << "-----------------------------\n";
-        cout << "Customer ID : " << customerID << "\n";
-        cout << "Name        : " << name << "\n";
-        cout << "Phone       : " << phoneNumber << "\n";
-        cout << "-----------------------------\n";
-    }
+    void displayCustomerInfo() const;
 };
-//int Customer::counter = 1; "deleted"
 #endif

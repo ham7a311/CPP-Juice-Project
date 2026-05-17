@@ -1,8 +1,7 @@
 #include "Order.h"
 
-Order::Order(Customer c) {
+Order::Order(Customer c) : customer(c) {
   // pass a Customer class member c as a parameter in constructor then assign it to our Customer class member customer
-    customer = c;
     totalPrice = 0;
     status = "Pending";
     orderID = counter++;      // increament the counter everytime a new order is created
@@ -32,7 +31,7 @@ double Order::calculateTotal() {
 void Order::showOrderDetails() {
     cout << "Order ID: " << orderID << endl;
 
-    customer.display();
+    customer.displayCustomerInfo();
 
     cout << "Your Order:" << endl;
 
