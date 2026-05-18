@@ -22,7 +22,7 @@ public:
 
 
     // Place order
-    void place_order() const ;
+    void placeOrder() const ;
 
 
     // Display
