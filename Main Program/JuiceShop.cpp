@@ -26,3 +26,13 @@ void JuiceShop::checkOrder const(int id){
    }
    cout<<"Order with ID"<<id<<" not found!"<<endl;
 }
+void JuiceShop::checkoutOrder(int id){
+   for(int i=0; i<orders.size(); i++){
+      if(id==orders[i].getOrderID()){
+       orders[i].completeOrder();
+       cout<<"Successful checkout, Order completed."<<endl;
+       return;
+      }
+   }
+   cout<<"Order not found"<<endl;
+}
