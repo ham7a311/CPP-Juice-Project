@@ -13,7 +13,7 @@ int Customer::getCustomerID() const{
 
 
 //Place order
-void Customer::place_order() const{
+void Customer::placeOrder() const{
     cout << "Order placed by: " << name << endl;
     cout << "Order received!" << endl;
 }
