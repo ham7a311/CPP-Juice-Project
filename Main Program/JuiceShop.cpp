@@ -5,10 +5,10 @@ Menu& JuiceShop::getMenu(){ //Getting the menu using Encapsulation
 void JuiceShop::addEmployee(Employee emp){
   employees.push_back(emp); //Adding a new employee to the employees vector
 }
-void JuiceShop::CreateOrder(Order ord){
+void JuiceShop::createOrder(Order ord){
    orders.push_back(ord); //Adding a new order to the orders vector
 }
-void JuiceShop::DisplayOrders(){
+void JuiceShop::displayOrders const(){
    if(orders.empty()){
       cout<<"There are no orders in the system yet."<<endl; //Checking first if the orders vectors empty, if not then it will start using the loop
       return;
@@ -17,7 +17,7 @@ void JuiceShop::DisplayOrders(){
      orders[i].showOrderDetails(); // shoing each order detaild using the "showOrderDetails()" function from order class
    }
 }
-void JuiceShop::CheckOrder(int id){
+void JuiceShop::checkOrder const(int id){
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
        orders[i].showOrderDetails();
