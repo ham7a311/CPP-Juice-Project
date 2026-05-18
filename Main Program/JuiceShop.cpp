@@ -8,7 +8,7 @@ void JuiceShop::addEmployee(Employee emp){
 void JuiceShop::createOrder(Order ord){
    orders.push_back(ord); //Adding a new order to the orders vector
 }
-void JuiceShop::displayOrders const(){
+void JuiceShop::displayOrders()const{
    if(orders.empty()){
       cout<<"There are no orders in the system yet."<<endl; //Checking first if the orders vectors empty, if not then it will start using the loop
       return;
@@ -17,7 +17,7 @@ void JuiceShop::displayOrders const(){
      orders[i].showOrderDetails(); // shoing each order detaild using the "showOrderDetails()" function from order class
    }
 }
-void JuiceShop::checkOrder const(int id){
+void JuiceShop::checkOrder(int id)const{
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
        orders[i].showOrderDetails();
