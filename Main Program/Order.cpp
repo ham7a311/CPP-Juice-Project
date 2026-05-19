@@ -21,10 +21,14 @@ double Order::calculateTotal() {
     for(auto obj: juices) {        
         auto juice = obj.first;
         auto size = obj.second;
-        totalPrice += juice.calculatePrice(size);    // item.first --> Juice, item.second --> size(S/M/L or s/m/l)
-    }
 
-    return totalPrice;
+        double price = juice.calculatePrice(size);
+        //// Checks for invalid juice size before adding the price.
+          if (price == -1) {
+            cout << "Invalid size for " << juice.getJuiceName() << endl;
+        } else {
+                totalPrice += price;
+                }                
 }
 
 
