@@ -51,6 +51,12 @@ int Order::getOrderID() const {
   return orderID;
 }
 
+string Order::getStatus() const {
+    return status; //// Returns the current status of the order.
+}
+
 void Order::completeOrder() {
   status = "Completed";
+
+  
 }
