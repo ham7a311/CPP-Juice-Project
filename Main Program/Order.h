@@ -6,6 +6,7 @@
 #include <vector>
 #include <utility>          // for using pairs in the vectors to store 
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Order {
