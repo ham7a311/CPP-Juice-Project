@@ -25,7 +25,11 @@ public:
     void addJuiceToOrder(Juice j, char size);
     double calculateTotal();
     void showOrderDetails();
+
+
     int getOrderID() const;
+string getstatus()const; 
+
     void completeOrder();
 };
 
