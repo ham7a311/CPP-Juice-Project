@@ -28,7 +28,9 @@ double Order::calculateTotal() {
             cout << "Invalid size for " << juice.getJuiceName() << endl;
         } else {
                 totalPrice += price;
-                }                
+                } 
+    }
+    return totalPrice;
 }
 
 
