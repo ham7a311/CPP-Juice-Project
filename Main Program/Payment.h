@@ -12,10 +12,10 @@ protected:
 public:
   Payment(double a,string method); //constructor
 
-  Virtual void processPayment()=0;
-  Virtual void displayPaymentInfo()const;
+  virtual void processPayment()=0;
+  virtual void displayPaymentInfo()const;
 
-  Virtual ~Payment();
+  virtual ~Payment();
 };
 
 #endif
