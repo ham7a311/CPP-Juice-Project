@@ -2,20 +2,34 @@
 #define PAYMENT_H
 
 #include <iostream>
-#include<string>
+#include <string>
+#include <stdexcept>
 using namespace std;
 
-class Payment{
+// Abstract class for different payment methods.
+class Payment {
 protected:
-  double amount;
-  string paymentmethod;
+    double amount;
+    string paymentMethod;
+
 public:
-  Payment(double a,string method); //constructor
+    // Constructor
+    Payment(double a, string method);
 
-  virtual void processPayment()=0;
-  virtual void displayPaymentInfo()const;
+    // Displays the available payment methods.
+    static void showPaymentMethods();
 
-  virtual ~Payment();
+    // Checks if the payment method is valid.
+    bool isValidPaymentMethod(string method) const;
+
+    // Pure virtual function
+    virtual void processPayment() = 0;
+
+    // Display payment info
+    virtual void displayPaymentInfo() const;
+
+    // Virtual destructor
+    virtual ~Payment();
 };
 
 #endif
