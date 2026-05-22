@@ -37,7 +37,7 @@ double Order::calculateTotal() {
 void Order::showOrderDetails() {
     cout << "Order ID: " << orderID << endl;
 
-    customer.displayCustomerInfo();
+    customer.displayPersonInfo();
 
     cout << "Your Order:" << endl;
 

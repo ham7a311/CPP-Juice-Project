@@ -9,23 +9,20 @@ using namespace std;
 class Customer : public Person {
 private:
     int customerID;
-    inline static int counter = 1; //becasue this class is written in a header file
-//the inline static in private because we dont want otherparts of the program to change it directly
+    inline static int counter = 1;
 
 public:
     // Constructor
     Customer(string n, string num = "00000000");
 
-
-    // Getters
+    // Getter
     int getCustomerID() const;
 
-
     // Place order
-    void placeOrder() const ;
+    void placeOrder() const;
 
-
-    // Display
-    void displayCustomerInfo() const;
+    // Override display function from Person
+    void displayPersonInfo() const override;
 };
+
 #endif

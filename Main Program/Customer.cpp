@@ -1,28 +1,27 @@
 #include "Customer.h"
 
 // Constructor
-Customer::Customer(string n, string num) : Person(n, num){
+Customer::Customer(string n, string num) : Person(n, num) {
     customerID = counter++;
 }
 
-
-//getter
-int Customer::getCustomerID() const{
+// Getter
+int Customer::getCustomerID() const {
     return customerID;
 }
 
-
-//Place order
-void Customer::placeOrder() const{
+// Place order
+void Customer::placeOrder() const {
     cout << "Order placed by: " << name << endl;
     cout << "Order received!" << endl;
 }
 
-
-//Display Customer Info
-void Customer::displayCustomerInfo() const{
+// Override display function from Person
+void Customer::displayPersonInfo() const {
     cout << "-----------------------------" << endl;
-    cout << "CustomerID: " << customerID << endl;
-    displayPersonInfo();
+    cout << "Customer Info" << endl;
+    cout << "Customer ID : " << customerID << endl;
+    cout << "Name        : " << name << endl;
+    cout << "Phone       : " << phoneNumber << endl;
     cout << "-----------------------------" << endl;
 }
