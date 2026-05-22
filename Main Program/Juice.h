@@ -18,6 +18,8 @@ class Juice {
         string getJuiceName() const;// const because it only return the value of juiceName not changing it
         double getBasePrice() const;
 
+        //Operator overloading to compare the names of the juices
+        bool operator==(string name) const;
 
         // A function to set the basePrice based on the size of the juice.
         double calculatePrice(char size) const; // const because it does not change any data member, it only reads the basePrice and returns the price after the modifications.

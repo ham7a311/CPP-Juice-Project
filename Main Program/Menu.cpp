@@ -19,7 +19,7 @@ void Menu::addJuice(Juice j){
 
 void Menu::removeJuice(string name){
     for(int i = 0; i < availableJuice.size(); i++){
-                if(availableJuice[i].getJuiceName() == name){
+                if(availableJuice[i] == name){
                     availableJuice.erase(availableJuice.begin() + i);
                     cout << "Juice deleted." << endl; 
                     return;
@@ -33,8 +33,8 @@ void Menu::removeJuice(string name){
 
 void Menu::searchJuice(string name){
     for(int i = 0; i < availableJuice.size(); i++){
-                if(availableJuice[i].getJuiceName() == name){
-                    cout << "Juice found." << endl; 
+                if(availableJuice[i] == name){
+                    cout << "Juice found." << endl;
                     availableJuice[i].displayJuiceInfo();
                     return;
                 }

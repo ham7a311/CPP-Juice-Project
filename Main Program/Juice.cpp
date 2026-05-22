@@ -17,6 +17,11 @@ double Juice::getBasePrice() const {
     return basePrice;
 }
 
+//Returns true if the juice name matches
+bool Juice::operator==(string name) const {
+    return juiceName == name;
+}
+
 
 // A function to set the basePrice based on the size of the juice.
 double Juice::calculatePrice(char size) const  {            // const because it does not change any data member, it only reads the basePrice and returns the price after the modifications.
