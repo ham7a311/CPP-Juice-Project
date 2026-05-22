@@ -2,6 +2,7 @@
 #define Person_H
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 // Parent class for Customer and Employee
@@ -24,7 +25,7 @@ class Person{
 
 
         //display common person Info.
-        void displayPersonInfo() const;
+        virtual void displayPersonInfo() const;
 };
 
 

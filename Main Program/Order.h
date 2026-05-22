@@ -28,7 +28,7 @@ public:
 
 
         int getOrderID() const;
-       string getstatus()const; 
+       string getStatus()const; 
 
     void completeOrder();
 };

@@ -30,6 +30,6 @@ void Person::setPhoneNumber(string phone){
 
 //Display
 void Person::displayPersonInfo() const{
-    cout << "Name      : " << name << endl;
-    cout << "Phone     : " << phoneNumber << endl;
+    cout << "Name  : " << name << endl;
+    cout << "Phone : " << phoneNumber << endl;
 }
