@@ -8,10 +8,15 @@ Juice::Juice(string juiceName, double basePrice) {
 }
 
 
-// Juice name getter (Needed in Menu.h)
+//getters (Needed in Menu.h)
 string Juice::getJuiceName() const {     // const because it only return the value of juiceName not changing it
             return juiceName;
 }
+
+double Juice::getBasePrice() const {
+    return basePrice;
+}
+
 
 // A function to set the basePrice based on the size of the juice.
 double Juice::calculatePrice(char size) const  {            // const because it does not change any data member, it only reads the basePrice and returns the price after the modifications.
