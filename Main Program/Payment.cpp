@@ -3,10 +3,12 @@
 Payment::Payment(double a, string method) {
     if (a <= 0) {
         throw invalid_argument("Payment amount must be greater than zero.");
+        //check if amount is valid
     }
 
     if (!isValidPaymentMethod(method)) {
         throw invalid_argument("Invalid payment method.");
+        //check the payment method if it exsists 
     }
 
     amount = a;
@@ -14,6 +16,7 @@ Payment::Payment(double a, string method) {
 }
 
 void Payment::showPaymentMethods() {
+    //the avaliable paymentmethods for the customer
     cout << "Available Payment Methods:" << endl;
     cout << "1. Cash" << endl;
     cout << "2. Visa" << endl;
@@ -21,6 +24,7 @@ void Payment::showPaymentMethods() {
 }
 
 bool Payment::isValidPaymentMethod(string method) const {
+    //it will return true only if one of these methods  chosen 
     return method == "Cash" ||
            method == "Visa" ||
            method == "American Express";
@@ -33,5 +37,6 @@ void Payment::displayPaymentInfo() const {
     cout << "-----------------------------" << endl;
 }
 
+//safe cleanup for payment objects
 Payment::~Payment() {
 }
