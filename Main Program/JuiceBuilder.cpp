@@ -2,7 +2,7 @@
 
 // Constructor
 JuiceBuilder::JuiceBuilder() {
-    extraPrice = 0.5; // Extra charge for making a custom juice
+    extraPrice = 0.5;
 }
 
 // Add a juice to the custom mix
@@ -14,7 +14,7 @@ void JuiceBuilder::addJuice(Juice j) {
 // Remove a juice from the custom mix by name
 void JuiceBuilder::removeJuice(string name) {
     for (int i = 0; i < selectedJuices.size(); i++) {
-        if (selectedJuices[i].getJuiceName() == name) {
+        if (selectedJuices[i] == name) {
             selectedJuices.erase(selectedJuices.begin() + i);
             cout << name << " removed from custom juice." << endl;
             return;
@@ -53,11 +53,15 @@ void JuiceBuilder::displayCustomMix() const {
         return;
     }
 
-    cout << "Custom Juice Mix:" << endl;
+    cout << "-----------------------------" << endl;
+    cout << "Custom Juice Mix" << endl;
+    cout << "-----------------------------" << endl;
 
     for (int i = 0; i < selectedJuices.size(); i++) {
         cout << "- " << selectedJuices[i].getJuiceName() << endl;
     }
 
-    cout << "Custom Base Price: " << calculateCustomBasePrice() << endl;
+    cout << "Extra Price       : " << extraPrice << " OMR" << endl;
+    cout << "Custom Base Price : " << calculateCustomBasePrice() << " OMR" << endl;
+    cout << "-----------------------------" << endl;
 }
