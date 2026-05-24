@@ -20,6 +20,7 @@ void JuiceShop::displayOrders()const{
 void JuiceShop::checkOrder(int id)const{
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
+       orders[i].payment()
        orders[i].showOrderDetails();
          return;
       }
@@ -35,8 +36,4 @@ void JuiceShop::checkoutOrder(int id){
       }
    }
    cout<<"Order not found"<<endl;
-}
-void JuiceShop::payment(){
-   cout<<"1. Cash"<<endl;
-   cout<<"2. Visa"<<endl;
 }
