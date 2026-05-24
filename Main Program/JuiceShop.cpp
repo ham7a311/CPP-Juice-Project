@@ -31,9 +31,9 @@ void JuiceShop::checkoutOrder(int id){
       if(id==orders[i].getOrderID()){
          double total=orders[i].calculateTotal();
          cout<<"Total bill:"<< total<<endl;
-         Payment::showPaymentMethods()
+         Payment::showPaymentMethods();
          Cout << "choose payment method"<<endl;
-         int choice
+         int choice;
          cin>>choice;
          Payment*payment=nullptr
          if (choice==1){
@@ -47,6 +47,7 @@ void JuiceShop::checkoutOrder(int id){
          }
          else{
             cout<<"Invalia payment method"<<endl;
+         }
       
        orders[i].completeOrder();
        cout<<"Successful checkout, Order completed."<<endl;
