@@ -2,35 +2,29 @@
 #define JUICEBUILDER_H
 
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 #include <stdexcept>
 #include "Juice.h"
 using namespace std;
 
-// This class allows the customer to build a custom juice mix.
 class JuiceBuilder {
 private:
-    vector<Juice> selectedJuices;
-    double extraPrice;
+    vector<string> availableIngredients;
+    vector<string> selectedIngredients;
+    double basePrice;
+    double ingredientPrice;
 
 public:
-    // Constructor
     JuiceBuilder();
 
-    // Add a juice to the custom mix
-    void addJuice(Juice j);
+    void showAvailableIngredients() const;
+    void addIngredient(string ingredient);
+    void removeIngredient(string ingredient);
 
-    // Remove a juice from the custom mix by name
-    void removeJuice(string name);
-
-    // Calculate the base price of the custom juice
-    double calculateCustomBasePrice() const;
-
-    // Create and return the final custom juice
+    double calculateCustomPrice() const;
     Juice createCustomJuice(string customName) const;
 
-    // Display the selected juices in the mix
     void displayCustomMix() const;
 };
 
