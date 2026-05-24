@@ -33,8 +33,8 @@ int main() {
             shop.getMenu().showMenu();
 
         } else if(choice == 2) {
-            
-            cout << "not ready yet";    // we should implement JuiceBuilder funcionality here, print a fixed text for now because its not ready yet, but this should be changed
+            // we should implement JuiceBuilder funcionality here
+            cout << "not ready yet";    // print a fixed text for now because its not ready yet, but this should be changed
             
         }  else if(choice == 3) {
             
