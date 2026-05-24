@@ -43,7 +43,7 @@ void JuiceShop::checkoutOrder(int id){
            payment=new VisaPayment();
          }
          else if (choice==3){
-           payment=new americanExpressPayment();
+           payment=new AmericanExpressPayment();
          }
          else{
             cout<<"Invalia payment method"<<endl;
