@@ -43,16 +43,25 @@ int main() {
             cout << "Enter your name: ";
             cin >> name;
             // note: this must be changed because phone number is optional
-            cout << "Enter your phone number: ";   // we should do a different functionality here to see if the user wants to include his phone number or not, and only ask for phone number when user agrees to.
+            cout << "Enter phone number (press - to skip): ";
             cin >> phoneNumber;
 
-            Customer customer(name, phoneNumber);
+            if (phoneNumber == "-") {
+                Customer customer(name);
+            } else {
+                Customer customer(name, phoneNumber);
+            }
 
             Order newOrder(customer);
 
             int count;
             cout << "Enter how many juices you want: ";
             cin >> count;
+
+            if (count <= 0) {
+                cout << "Invalid number of juices" << endl;
+                continue;
+            }
 
             for (int i = 0; i < count; i++) {
 
