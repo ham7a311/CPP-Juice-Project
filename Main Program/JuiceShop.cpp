@@ -45,6 +45,8 @@ void JuiceShop::checkoutOrder(int id){
          else if (choice==3){
            payment=new americanExpressPayment();
          }
+         else{
+            cout<<"Invalia payment method"<<endl;
       
        orders[i].completeOrder();
        cout<<"Successful checkout, Order completed."<<endl;
