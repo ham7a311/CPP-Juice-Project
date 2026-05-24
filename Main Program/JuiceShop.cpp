@@ -30,6 +30,7 @@ void JuiceShop::checkoutOrder(int id){
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
        Cout << "choose payment method"<<endl;
+       cin>>paymentMethod;
        payment()
        orders[i].completeOrder();
        cout<<"Successful checkout, Order completed."<<endl;
