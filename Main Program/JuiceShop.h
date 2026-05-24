@@ -19,8 +19,8 @@ class JuiceShop{
       Menu& getMenu();
       void addEmployee(Employee emp);
       void createOrder(Order ord);
-      void displayOrders()const;
-      void checkOrder(int id)const;
+      void displayOrders();
+      void checkOrder(int id);
       void checkoutOrder(int id);
 };
 #endif
