@@ -1,5 +1,5 @@
-#ifndef Person_H
-#define Person_H
+#ifndef PERSON_H
+#define PERSON_H
 
 #include <iostream>
 #include <string>
