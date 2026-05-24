@@ -27,10 +27,14 @@ public:
     void showOrderDetails();
 
 
-        int getOrderID() const;
-       string getStatus()const; 
+    int getOrderID() const;
+    string getStatus()const; 
 
     void completeOrder();
+
+
+    //Friend Operator Overloading to print order details
+    friend ostream& operator<<(ostream& out, Order& order);
 };
 
 #endif

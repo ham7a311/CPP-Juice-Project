@@ -35,34 +35,51 @@ double Order::calculateTotal() {
 
 
 void Order::showOrderDetails() {
-    cout << "Order ID: " << orderID << endl;
-
-    customer.displayPersonInfo();
-
-    cout << "Your Order:" << endl;
-
-    for (auto obj : juices) {
-        auto juice = obj.first;
-        auto size = obj.second;
-        cout << "Juice: " << juice.getJuiceName() << endl;
-        cout << "Size: " << size << endl;
-        cout << "Price: " << juice.calculatePrice(size) << endl;
-    }
-
-    cout << "Total Price: " << calculateTotal() << endl;
-    cout << "Status: " << status << endl;
+    cout << *this;
 }
 
 int Order::getOrderID() const {
   return orderID;
 }
 
+
+// Returns the current status of the order.
 string Order::getStatus() const {
-    return status; //// Returns the current status of the order.
+    return status; 
 }
 
 void Order::completeOrder() {
   status = "Completed";
 
   
+}
+
+
+
+// Overloads << to print order details.
+ostream& operator<<(ostream& out, Order& order) {
+    out << "=================================" << endl;
+    out << "Order ID: " << order.orderID << endl;
+    out << "Status  : " << order.status << endl;
+    out << "=================================" << endl;
+
+    out << "Customer Information:" << endl;
+    order.customer.displayPersonInfo();
+
+    out << "Ordered Juices:" << endl;
+
+    for (auto obj : order.juices) {
+        Juice juice = obj.first;
+        char size = obj.second;
+
+        out << "- Juice: " << juice.getJuiceName() << endl;
+        out << "  Size : " << size << endl;
+        out << "  Price: " << juice.calculatePrice(size) << " OMR" << endl;
+    }
+
+    out << "---------------------------------" << endl;
+    out << "Total Price: " << order.calculateTotal() << " OMR" << endl;
+    out << "=================================" << endl;
+
+    return out;
 }
