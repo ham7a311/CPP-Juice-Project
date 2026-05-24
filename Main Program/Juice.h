@@ -1,49 +1,34 @@
-#ifndef JUICEBUILDER_H
-#define JUICEBUILDER_H
+#ifndef JUICE_H
+#define JUICE_H
 
 #include <iostream>
 #include <string>
-#include <vector>
-#include <stdexcept>
-#include "Juice.h"
-
 using namespace std;
 
-class JuiceBuilder {
-private:
-    // list of ingredients that the customer can choose from
-    vector<string> availableIngredients;
+class Juice {
+    private:
+        string juiceName;           // "Mango", "Strawberry", "Banana", "Pineapple", "Mint", "Ice"
+        double basePrice;    // basePrice -> the starting price for every juice(this is decided in menu)
 
-    // ingredients selected by the customer
-    vector<string> selectedIngredients;
+    public:
+        //Constructor
+        Juice(string juiceName, double basePrice);
 
-    // starting price for any custom juice
-    double basePrice;
 
-    // extra price for each added ingredient
-    double ingredientPrice;
+        //getters
+        string getJuiceName() const;// const because it only return the value of juiceName not changing it
+        double getBasePrice() const;
 
-public:
-    // constructor
-    JuiceBuilder();
+        //Operator overloading to compare the names of the juices
+        bool operator==(string name) const;
 
-    // display all available ingredients
-    void showAvailableIngredients() const;
+        // A function to set the basePrice based on the size of the juice.
+        double calculatePrice(char size) const; // const because it does not change any data member, it only reads the basePrice and returns the price after the modifications.
 
-    // add ingredient to the custom juice
-    void addIngredient(string ingredient);
 
-    // remove ingredient from the custom juice
-    void removeIngredient(string ingredient);
+        // A function to display the Info. of the Juice.
+        void displayJuiceInfo() const;    // const because it only displays the Info.
 
-    // calculate the final price of the custom juice
-    double calculateCustomPrice() const;
-
-    // create and return the final custom juice
-    Juice createCustomJuice(string customName) const;
-
-    // display the selected ingredients and price
-    void displayCustomMix() const;
 };
 
 #endif
