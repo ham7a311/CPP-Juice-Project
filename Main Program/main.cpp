@@ -26,7 +26,7 @@ int main() {
 
         int choice;
         cout << "Enter your choice: ";
-        cin << choice;
+        cin >> choice;
 
         if(choice == 1) {
             
@@ -41,9 +41,9 @@ int main() {
             string name, phoneNumber;
 
             cout << "Enter your name: ";
-            cin << name;
+            cin >> name;
             cout << "Enter your phone number: ";
-            cin << phoneNumber;
+            cin >> phoneNumber;
 
             Customer customer(name, phoneNumber);
 
@@ -54,6 +54,9 @@ int main() {
             cin >> count;
 
             for (int i = 0; i < count; i++) {
+
+                // print this for every count
+                // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here)
                 
                 string juiceName;
                 char size;
@@ -64,7 +67,7 @@ int main() {
                 cout << "Size (S/M/L) or (s/m/l): ";
                 cin >> size;
 
-                newOrder.addJuiceToOrder(Juice(juiceName), size);
+                newOrder.addJuiceToOrder(Juice(juiceName, 1.0), size);    // this needs better implementation, basePrice is fixed for now but it should'nt be
                 
             }
 
