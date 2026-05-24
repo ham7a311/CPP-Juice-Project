@@ -20,7 +20,6 @@ void JuiceShop::displayOrders()const{
 void JuiceShop::checkOrder(int id)const{
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
-       orders[i].payment()
        orders[i].showOrderDetails();
          return;
       }
@@ -30,6 +29,8 @@ void JuiceShop::checkOrder(int id)const{
 void JuiceShop::checkoutOrder(int id){
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
+       Cout << "choose payment method"<<endl;
+       payment()
        orders[i].completeOrder();
        cout<<"Successful checkout, Order completed."<<endl;
        return;
