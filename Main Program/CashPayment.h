@@ -4,10 +4,15 @@
 #include "Payment.h"
 
 class CashPayment : public Payment {
+private:
+    double cashGiven;
+
 public:
-    CashPayment(double a);
+    CashPayment(double a, double cash);
 
     void processPayment() override;
+
+    double calculateChange() const;
 };
 
 #endif
