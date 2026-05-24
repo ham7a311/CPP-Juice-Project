@@ -29,17 +29,20 @@ void JuiceShop::checkOrder(int id)const{
 void JuiceShop::checkoutOrder(int id){
    for(int i=0; i<orders.size(); i++){
       if(id==orders[i].getOrderID()){
+         double total=orders[i].calculateTotal();
+         cout<<"Total bill:"<< total<<endl;
          payment::showpaymentMethods()
        Cout << "choose payment method"<<endl;
        int choice
        cin>>choice;
+          Payment*payment=nullptr
          if choice==1{
-           string paymentMethod=Cash;
+           paymen=Cash;
                }
          else if choice==2{
-           string paymenyKethod=Visa;
+           paymenyKethod=Visa;
          }
-       Payment*payment=nullptr
+      
        orders[i].completeOrder();
        cout<<"Successful checkout, Order completed."<<endl;
          if (payment!=nullptr){
