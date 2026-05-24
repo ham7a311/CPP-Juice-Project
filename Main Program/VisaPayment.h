@@ -9,6 +9,7 @@ private:
 
 public:
     VisaPayment(double a, string cardNum); //constructer
+// a is the bill amount paid by Visa
 
     void processPayment() override;
 
