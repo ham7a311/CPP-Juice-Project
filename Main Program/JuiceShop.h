@@ -5,6 +5,10 @@
 #include"Menu.h"
 #include"Employee.h"
 #include"Order.h"
+#include"Payment.h"
+#include"CashPayment.h"
+#include"VisaPayment.h"
+#include"AmericanExpressPayment.h"
 using namespace std;
 class JuiceShop{
   private:
