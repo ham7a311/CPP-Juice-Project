@@ -1,9 +1,18 @@
-#include "CashPayment.h"
+#ifndef CASHPAYMENT_H
+#define CASHPAYMENT_H
 
-CashPayment::CashPayment(double a) //constructer
-    : Payment(a, "Cash") {
-}
+#include "Payment.h"
 
-void CashPayment::processPayment() { //cash payment process
-    cout << "Cash payment of " << amount << " OMR completed." << endl;
-}
+class CashPayment : public Payment {
+private:
+    double cashGiven;
+
+public:
+    CashPayment(double a, double cash);
+
+    void processPayment() override;
+
+    double calculateChange() const;
+};
+
+#endif
