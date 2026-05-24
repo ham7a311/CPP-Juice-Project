@@ -42,7 +42,8 @@ int main() {
 
             cout << "Enter your name: ";
             cin >> name;
-            cout << "Enter your phone number: ";
+            // note: this must be changed because phone number is optional
+            cout << "Enter your phone number: ";   // we should do a different functionality here to see if the user wants to include his phone number or not, and only ask for phone number when user agrees to.
             cin >> phoneNumber;
 
             Customer customer(name, phoneNumber);
