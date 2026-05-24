@@ -36,3 +36,7 @@ void JuiceShop::checkoutOrder(int id){
    }
    cout<<"Order not found"<<endl;
 }
+void JuiceShop::payment(){
+   cout<<"1. Cash"<<endl;
+   cout<<"2. Visa"<<endl;
+}
