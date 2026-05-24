@@ -42,10 +42,10 @@ int main() {
 
             cout << "Enter your name: ";
             cin >> name;
-            // note: this must be changed because phone number is optional
             cout << "Enter phone number (press - to skip): ";
             cin >> phoneNumber;
 
+            Customer customer;
             if (phoneNumber == "-") {
                 Customer customer(name);
             } else {
