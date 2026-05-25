@@ -32,7 +32,7 @@ void JuiceShop::checkOrder(int id){
          return;
       }
    }
-   cout<<"Order with ID"<<id<<" not found!"<<endl;
+   cout<<"Order with ID: "<<id<<" not found!"<<endl;
 }
 
 
@@ -74,16 +74,26 @@ void JuiceShop::checkoutOrder(int id) {
                 }
                 else if (choice == 2) {
                     string cardNumber;
-                    cout << "Enter Visa card number: ";
-                    cin >> cardNumber;
-
-                    payment = new VisaPayment(total, cardNumber);
+                   cout << "Enter Visa card number: ";
+                   cin >> cardNumber;
+               
+                   if (cardNumber.length() != 16) {
+                       cout << "Visa card number must be 16 digits.\n";
+                       return;
+                   }
+               
+                   payment = new VisaPayment(total, cardNumber);
                 }
                 else if (choice == 3) {
                     string cardNumber;
                     cout << "Enter American Express card number: ";
                     cin >> cardNumber;
-
+               
+                    if (cardNumber.length() != 15) {
+                       cout << "American Express card number must be 15 digits.\n";
+                       return;
+                    }
+               
                     payment = new AmericanExpressPayment(total, cardNumber);
                 }
                 else {
