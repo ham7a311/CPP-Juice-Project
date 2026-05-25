@@ -41,6 +41,9 @@ void JuiceShop::checkoutOrder(int id) {
 
             double total = orders[i].calculateTotal();
 
+           Employee emp = getRandomEmployee();
+           cout << "Order handled by Employee: " << emp.getName() << " with the ID: " << emp.getID() << endl;
+
             cout << "Total bill: " << total << " OMR" << endl;
 
             Payment::showPaymentMethods();
