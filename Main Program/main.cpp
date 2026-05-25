@@ -67,7 +67,7 @@ int main() {
             // must add try and catch handle error if custom juice without ingredients
             Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
 
-            shop.getMenu.addJuice(custom);
+            shop.getMenu().addJuice(custom);
             
         }  else if(choice == 3) {
             
