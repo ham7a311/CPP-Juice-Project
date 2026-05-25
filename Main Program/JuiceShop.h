@@ -1,6 +1,7 @@
 #ifndef JUICESHOP_H
 #define JUICESHOP_H
 #include<iostream>
+#include<string>
 #include<vector>
 #include"Menu.h"
 #include"Employee.h"
