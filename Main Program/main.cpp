@@ -72,12 +72,12 @@ int main() {
             while(true) {
                 juiceBuilder.showAvailableIngredients();
                 
-                string ingredient;
+                int ingredient;
                 cout << "Enter ingredients (enter '-' to finish your custom juice): ";
                 cin >> ingredient;
 
-                if(ingredient == "-") {
-                    break; // break the loop when user enter "-", we used "-" instead of '-' because its a string not char
+                if(ingredient == -1) {
+                    break; // break the loop when user enter -1
                 }
 
                 juiceBuilder.addIngredient(ingredient);
