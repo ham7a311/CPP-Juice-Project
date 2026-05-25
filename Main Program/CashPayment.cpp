@@ -4,7 +4,7 @@
 CashPayment::CashPayment(double a, double cash)
     : Payment(a, "Cash") {
 
-    if (cash < 0) {
+    if (cash <= 0) {
         throw invalid_argument("Cash amount cannot be negative.");
     }
 
