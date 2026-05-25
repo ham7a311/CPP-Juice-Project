@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
+#include <ctime>
 #include "JuiceShop.h"
 #include "Customer.h"
 #include "Employee.h"
@@ -8,6 +10,8 @@
 using namespace std;
 
 int main() {
+
+    srand(time(0));
 
     JuiceShop shop;
 
