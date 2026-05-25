@@ -9,6 +9,8 @@ void JuiceShop::addEmployee(Employee emp){
 
 void JuiceShop::createOrder(Order ord){
    orders.push_back(ord); //Adding a new order to the orders vector
+
+   cout << "Your Order ID is: " << Customer.getCustomerID() << endl;
 }
 
 
@@ -41,16 +43,8 @@ void JuiceShop::checkoutOrder(int id) {
 
             double total = orders[i].calculateTotal();
 
-            try{
-                Employee emp = getRandomEmployee();
-                cout << "Order handled by Employee: " << endl;
-                emp.displayPersonInfo();
-            }
-            catch (const runtime_error& e){
-                cout << "Employee Error: " << e.what() << endl;   //e.what() to return the message "No employee available" from getRandomEmployee function.
-                return;
-            }
-
+           Employee emp = getRandomEmployee();
+           cout << "Order handled by Employee: " << emp.displayPersonInfo();
 
                 cout << "Total bill: " << total << " OMR" << endl;
 
