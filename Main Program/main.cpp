@@ -45,11 +45,10 @@ int main() {
             cout << "Enter phone number (press - to skip): ";
             cin >> phoneNumber;
 
-            Customer customer;
-            if (phoneNumber == "-") {
-                Customer customer(name);
-            } else {
-                Customer customer(name, phoneNumber);
+            Customer customer(name); 
+
+            if (phoneNumber != "-") {
+                customer = Customer(name, phoneNumber);  // if user does not skip by clicking - , add the phone number user typed
             }
 
             Order newOrder(customer);
@@ -77,7 +76,10 @@ int main() {
                 cout << "Size (S/M/L) or (s/m/l): ";
                 cin >> size;
 
-                newOrder.addJuiceToOrder(Juice(juiceName, 1.0), size);    // this needs better implementation, basePrice is fixed for now but it should'nt be
+                Juice juice = shop.getMenu.getJuice(juiceName);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it prize
+                newOrder.addJuiceToOrder(juice);
+
+                
                 
             }
 
