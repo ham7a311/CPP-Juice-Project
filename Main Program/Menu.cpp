@@ -43,12 +43,15 @@ void Menu::searchJuice(string name){
 }
 
 
-
-string Menu::getJuiceName(string name) {
+// return a juice object from menu that has the same name as "name" which is provided by user
+// throw an invalid argument if juice not found
+Juice Menu::getJuice(string name) {
     for(auto juice: availableJuices) {
         if(juice == name) {
             return juice;
         }
     }
+
+    throw invalid_argument("Juice name not found.");
     
 }
