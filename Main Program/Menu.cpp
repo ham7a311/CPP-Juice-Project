@@ -68,6 +68,6 @@ Juice Menu::getJuiceUsingIndex(int index) {
 }
 
 
-int Manu::size() const {
+int Menu::size() const {
     return availableJuices.size();
 }
