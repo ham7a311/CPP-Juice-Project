@@ -28,6 +28,9 @@ class Menu{
 
 
         void searchJuice(string name);
+
+        // getter for returning juice name, this will be used in main.cpp
+        string getJuiceName(string name);
 };
 
 
