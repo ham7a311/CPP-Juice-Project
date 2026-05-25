@@ -9,6 +9,8 @@ void JuiceShop::addEmployee(Employee emp){
 
 void JuiceShop::createOrder(Order ord){
    orders.push_back(ord); //Adding a new order to the orders vector
+
+   cout << "Your Order ID is: " << Customer.getCustomerID() << endl;
 }
 
 
