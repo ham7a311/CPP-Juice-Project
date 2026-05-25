@@ -4,6 +4,7 @@
 #include "Customer.h"
 #include "Employee.h"
 #include "Order.h"
+#include "JuiceBuilder.h"
 using namespace std;
 
 int main() {
@@ -43,8 +44,8 @@ int main() {
             while(true) {
                 juiceBuilder.showAvailableIngredients();
                 
-                string ingerdient;
-                cout << "Enter ingredients (enter '-' to finish your custom juice: ";
+                string ingredient;
+                cout << "Enter ingredients (enter '-' to finish your custom juice): ";
                 cin >> ingredient;
 
                 if(ingredient == "-") {
