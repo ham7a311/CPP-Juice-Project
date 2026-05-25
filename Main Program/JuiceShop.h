@@ -2,6 +2,8 @@
 #define JUICESHOP_H
 #include<iostream>
 #include<string>
+#include<cstdlib>
+#include<ctime>
 #include<vector>
 #include"Menu.h"
 #include"Employee.h"
