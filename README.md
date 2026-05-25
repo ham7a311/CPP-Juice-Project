@@ -128,7 +128,7 @@ Represents a customer order.
 
 ---
 
-### 📊 13. OrderReport
+### 📊 7. OrderReport
 
 Generates a simple report for a specific order.
 
@@ -151,7 +151,7 @@ Generates a simple report for a specific order.
 
 ---
 
-### 💳 7. Payment (Abstract Class)
+### 💳 8. Payment (Abstract Class)
 
 Base class for payment methods.
 
@@ -166,7 +166,7 @@ Base class for payment methods.
 
 ---
 
-### 💵 8. CashPayment
+### 💵 9. CashPayment
 
 Handles cash payments.
 
@@ -182,7 +182,7 @@ Handles cash payments.
 
 ---
 
-### 💳 9. VisaPayment
+### 💳 10. VisaPayment
 
 Handles Visa card payments.
 
@@ -197,7 +197,7 @@ Handles Visa card payments.
 
 ---
 
-### 💳 10. AmericanExpressPayment
+### 💳 11. AmericanExpressPayment
 
 Handles American Express card payments.
 
@@ -212,7 +212,7 @@ Handles American Express card payments.
 
 ---
 
-### 🏪 11. JuiceShop (Main System)
+### 🏪 12. JuiceShop (Main System)
 
 The main controller of the system.
 
@@ -229,7 +229,7 @@ The main controller of the system.
 
 ---
 
-### 🍓 12. JuiceBuilder
+### 🍓 13. JuiceBuilder
 
 Allows the customer to create a custom juice.
 
