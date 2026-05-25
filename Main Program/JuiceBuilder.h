@@ -44,6 +44,10 @@ public:
 
     // display the selected ingredients and price
     void displayCustomMix() const;
+
+    int getSize() const;    // get size 
+
+    string getIngredientUsingIndex(int index) const;
 };
 
 #endif
