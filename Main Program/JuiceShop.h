@@ -6,6 +6,7 @@
 #include<ctime>
 #include<vector>
 #include"Menu.h"
+#include"Customer.h"
 #include"Employee.h"
 #include"Order.h"
 #include"Payment.h"
