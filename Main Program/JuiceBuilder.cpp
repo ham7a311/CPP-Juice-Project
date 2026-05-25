@@ -99,3 +99,13 @@ void JuiceBuilder::displayCustomMix() const {
     cout << "Total Price      : " << calculateCustomPrice() << " OMR" << endl;
     cout << "-----------------------------" << endl;
 }
+
+
+int JuiceBuilder::getSize() const {
+    return availableIngredients.size();
+}
+
+
+string JuiceBuilder::getIngredientByIndex(int index) const {
+    return availableIngredients[index - 1];
+}
