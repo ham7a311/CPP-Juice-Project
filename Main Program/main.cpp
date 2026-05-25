@@ -62,7 +62,7 @@ int main() {
                 Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
 
 
-            juiceBuilder.displayCustomMix();
+                juiceBuilder.displayCustomMix();
                 
           }
         }  else if(choice == 3) {
@@ -96,16 +96,17 @@ int main() {
                 // print this for every count
                 // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here of how many number of juices user can order)
                 
-                string juiceName;
+                string juiceNumberChoice;
                 char size;
 
                 cout << "Juice name: ";
-                cin >> juiceName;
+                cin >> juiceNumberChoice;
 
                 cout << "Size (S/M/L) or (s/m/l): ";
                 cin >> size;
 
-                Juice juice = shop.getMenu().getJuice(juiceName);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it prize
+                // users enters the number next to the juice, and we find the juice name by looping through the vector and finding vector[juicNumberChoice-1]
+                Juice juice = shop.getMenu().getJuiceByIndex(juiceNumberChoice);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it price
                 
                 double handleInvalidSize = juice.calculatePrice(size);    
 
