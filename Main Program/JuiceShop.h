@@ -25,5 +25,6 @@ class JuiceShop{
       void displayOrders();
       void checkOrder(int id);
       void checkoutOrder(int id);
+      Employee getRandomEmployee;
 };
 #endif
