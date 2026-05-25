@@ -128,6 +128,29 @@ Represents a customer order.
 
 ---
 
+### 📊 13. OrderReport
+
+Generates a simple report for a specific order.
+
+**Friend Class:**
+- `OrderReport` is declared as a friend class inside `Order`
+- This allows it to access private order details directly
+
+**Functions:**
+- `printOrderReport()`
+
+**Purpose:**
+- Displays order ID
+- Displays order status
+- Displays customer information
+- Displays number of juices in the order
+- Displays total price
+
+**OOP Concept Used:**
+- Friend Class
+
+---
+
 ### 💳 7. Payment (Abstract Class)
 
 Base class for payment methods.
