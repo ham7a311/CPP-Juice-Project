@@ -73,7 +73,7 @@ int main() {
                 juiceBuilder.showAvailableIngredients();
                 
                 int ingredient;
-                cout << "Enter ingredients (enter '-' to finish your custom juice): ";
+                cout << "Enter ingredients (enter -1 to finish your custom juice): ";
                 cin >> ingredient;
 
                 if(ingredient == -1) {
