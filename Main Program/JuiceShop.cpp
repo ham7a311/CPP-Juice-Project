@@ -1,4 +1,6 @@
 #include "JuiceShop.h"
+#include <limits>
+
 Menu& JuiceShop::getMenu(){ //Getting the menu using Encapsulation
    return menu;
  }
@@ -69,6 +71,13 @@ void JuiceShop::checkoutOrder(int id) {
                     double cash;
                     cout << "Enter cash amount: ";
                     cin >> cash;
+
+                    // If the user enters a non-number, cin fails. Clear it and ignore the wrong input to prevent an infinite loop.
+                    if (cin.fail()) {
+                        cin.clear();
+                        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        throw invalid_argument("Invalid cash input.");
+                    }
 
                     payment = new CashPayment(total, cash);
                 }
