@@ -8,7 +8,7 @@ private:
     double cashGiven;
 
 public:
-    CashPayment(double a, double cash); // a --> is the given cach, cach --> is the actual price.
+    CashPayment(double a, double cash); //cach a --> is the actual price, cash --> is the given .
 
     void processPayment() override;
 

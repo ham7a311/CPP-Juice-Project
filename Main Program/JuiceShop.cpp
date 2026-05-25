@@ -43,6 +43,7 @@ void JuiceShop::checkoutOrder(int id) {
 
             double total = orders[i].calculateTotal();
 
+            //Handles the case when no employee are available
             try {
                 Employee emp = getRandomEmployee();
                 cout << "Order handled by Employee:" << endl;
@@ -53,7 +54,7 @@ void JuiceShop::checkoutOrder(int id) {
                 return;
             }
 
-                cout << "Total bill: " << total << " OMR" << endl;
+            cout << "Total bill: " << total << " OMR" << endl;
 
             Payment::showPaymentMethods();
 

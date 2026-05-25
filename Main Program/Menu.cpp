@@ -67,7 +67,7 @@ Juice Menu::getJuiceUsingIndex(int index) {
     return availableJuices[index-1];
 }
 
-
+//Returns the number of juices in the menu
 int Menu::size() const {
     return availableJuices.size();
 }
