@@ -61,7 +61,7 @@ Juice Menu::getJuice(string name) {
 
 
 Juice Menu::getJuiceUsingIndex(int index) {
-    if (index < 1 || index > availableJuices.size() {
+    if (index < 1 || index > availableJuices.size()) {
         throw invalid_argument("Invalid Juice selection, there is no juice with that number");
     }
     return availableJuices[index-1];
