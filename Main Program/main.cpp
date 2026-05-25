@@ -133,6 +133,8 @@ int main() {
             int id;
             cout << "Enter your order id to complete checkout: ";
             cin >> id;
+
+            shop.checkoutOrder(id);
             
         } else if (choice == 6) {
             cout << "Exiting the system";
