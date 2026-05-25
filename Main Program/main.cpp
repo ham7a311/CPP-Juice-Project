@@ -100,6 +100,17 @@ int main() {
                  char size;
                  cout << "Size of Custom Juice (S/M/L) or (s/m/l): ";
                  cin >> size;
+
+                double handleInvalidSize = custom.calculatePrice(size);
+
+                while (handleInvalidSize == -1) {
+                    // handle when size = -1 (this must print to user that he typed an inavlid size)
+                    // ask user for size again
+                    cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
+                    cin >> size;
+                
+                    handleInvalidSize = custom.calculatePrice(size); // avoid infinte loop
+                }
     
                  newOrder.addJuiceToOrder(custom, size);
     
@@ -144,7 +155,7 @@ int main() {
             for (int i = 0; i < count; i++) {
 
                 // print this for every count
-                // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here of how many number of juices user can order)
+                // if count = 2 this whole loop will be printed 2 times, and so on
                 
                 int juiceNumberChoice;
                 char size;
@@ -168,7 +179,7 @@ int main() {
                 double handleInvalidSize = juice.calculatePrice(size);    
 
                 while (handleInvalidSize == -1) {
-                    // handle when size = -1 (this must print to user that he typed an inavlid size
+                    // handle when size = -1 (this must print to user that he typed an inavlid size)
                    // ask user for size again
                     cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
                     cin >> size;
