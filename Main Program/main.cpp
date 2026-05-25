@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "JuiceShop.h"
 #include "Customer.h"
 #include "Employee.h"
