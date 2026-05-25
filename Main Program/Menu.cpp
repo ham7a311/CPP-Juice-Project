@@ -1,4 +1,5 @@
 #include "Menu.h"
+#include <stdexcept>
 
 
 void Menu::showMenu() const {
@@ -59,7 +60,7 @@ Juice Menu::getJuice(string name) {
 }
 
 
-Juice getJuiceUsingIndex(int index) {
+Juice Menu::getJuiceUsingIndex(int index) {
     if (index < 1 || index > availableJuices.size() {
         throw invalid_argument("Invalid Juice selection, there is no juice with that number");
     }
