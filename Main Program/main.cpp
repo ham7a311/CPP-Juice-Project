@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 
-    srand(time(0));
+    srand(time(0));    // srand(time(0)) to seed the getRandomEmplyee() function
 
     JuiceShop shop;
 
@@ -89,15 +89,20 @@ int main() {
 
             
             // must add try and catch handle error if custom juice without ingredients
-            Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
-
-             char size;
-             cout << "Size of Custom Juice (S/M/L) or (s/m/l): ";
-             cin >> size;
-
-            newOrder.addJuiceToOrder(custom, size);
-
-            shop.createOrder(newOrder);
+            try {
+                 Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
+    
+                 char size;
+                 cout << "Size of Custom Juice (S/M/L) or (s/m/l): ";
+                 cin >> size;
+    
+                 newOrder.addJuiceToOrder(custom, size);
+    
+                 shop.createOrder(newOrder);
+            } catch (const exception& e) {
+                 cout << e.what();
+            }
+            
             
         }  else if(choice == 3) {
             
@@ -136,6 +141,11 @@ int main() {
                 cout << "Juice number: ";
                 cin >> juiceNumberChoice;
 
+                if(juiceNumberChoice < 1 || juiceNumberChoice > shop.getMenu().size()) {
+                    cout << "Invalid juice number\n";
+                    continue;
+                }
+
                 cout << "Size (S/M/L) or (s/m/l): ";
                 cin >> size;
 
@@ -148,6 +158,8 @@ int main() {
                 if(handleInvalidSize == -1) {
                     // handle when size = -1 (this must print to user that he typed an inavlid size
                    // ask user for size again
+                    cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
+                    cin >> size;
                 }
 
                 newOrder.addJuiceToOrder(juice, size);
