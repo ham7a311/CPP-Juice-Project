@@ -19,6 +19,11 @@ int main() {
     shop.getMenu().addJuice(Juice("Mint", 1.3));
     shop.getMenu().addJuice(Juice("Ice", 1.1));
 
+    // add employees
+    shop.addEmployee(Employee("E1", "Ahmed", "92938390", "Cashier"));
+    shop.addEmployee(Employee("E2", "Mohammed", "92922920", "Cashier"));
+    shop.addEmployee(Employee("E3", "Ali", "9282020", "Cashier"));
+
     while (true) {
         
         cout << "1. View Menu" << endl;
@@ -121,8 +126,6 @@ int main() {
                 }
 
                 newOrder.addJuiceToOrder(juice, size);
-
-                
                 
                 
             }
