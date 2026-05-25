@@ -39,8 +39,10 @@ int main() {
         } else if(choice == 2) {
             JuiceBuilder juiceBuilder;
 
-            int ingerdientNumber;
-
+            string customJuiceName;
+            cout << "Enter the name of your custom juice: ";
+            cin >> customJuiceName;
+            
             while(true) {
                 juiceBuilder.showAvailableIngredients();
                 
@@ -54,17 +56,15 @@ int main() {
 
                 juiceBuilder.addIngredient(ingredient);
 
-                string customJuiceName;
-                cout << "Enter the name of your custom juice: ";
-                cin >> customJuiceName;
-
-                // must add try and catch handle error if custom juice without ingredients
-                Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
-
 
                 juiceBuilder.displayCustomMix();
-                
+ 
           }
+
+            
+            // must add try and catch handle error if custom juice without ingredients
+            Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
+            
         }  else if(choice == 3) {
             
             string name, phoneNumber;
@@ -106,6 +106,7 @@ int main() {
                 cin >> size;
 
                 // users enters the number next to the juice, and we find the juice name by looping through the vector and finding vector[juicNumberChoice-1]
+                // we should handle invalid number by the user as well
                 Juice juice = shop.getMenu().getJuiceByIndex(juiceNumberChoice);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it price
                 
                 double handleInvalidSize = juice.calculatePrice(size);    
