@@ -101,7 +101,7 @@ int main() {
                  cout << "Size of Custom Juice (S/M/L) or (s/m/l): ";
                  cin >> size;
 
-                double handleInvalidSize = custom.calculatePrice(size);
+                double handleInvalidSize = custom.calculateCustomPrice(size);
 
                 while (handleInvalidSize == -1) {
                     // handle when size = -1 (this must print to user that he typed an inavlid size)
@@ -109,7 +109,7 @@ int main() {
                     cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
                     cin >> size;
                 
-                    handleInvalidSize = custom.calculatePrice(size); // avoid infinte loop
+                    handleInvalidSize = custom.calculateCustomPrice(size); // avoid infinte loop
                 }
     
                  newOrder.addJuiceToOrder(custom, size);
