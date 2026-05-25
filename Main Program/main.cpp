@@ -22,7 +22,9 @@ int main() {
         cout << "1. View Menu" << endl;
         cout << "2. Create Custom Juice" << endl;
         cout << "3. Place Order" << endl;
-        cout << "4. Exit" << endl;
+        cout << "4. View Orders" << endl;
+        cout << "5. Checkout Order" << endl;
+        cout << "6. Exit" << endl;
 
         int choice;
         cout << "Enter your choice: ";
@@ -125,6 +127,14 @@ int main() {
             shop.createOrder(newOrder);
 
         } else if (choice == 4) {
+            chop.displayOrders();
+        } else if (choice == 5) {
+            
+            int id;
+            cout << "Enter your order id to complete checkout: ";
+            cin >> id;
+            
+        } else if (choice == 6) {
             cout << "Exiting the system";
             break; // break/exit the loop
         } else {
