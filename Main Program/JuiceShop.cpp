@@ -115,6 +115,9 @@ void JuiceShop::checkoutOrder(int id) {
                 orders[i].completeOrder();
 
                 cout << "Successful checkout, order completed." << endl;
+                
+                // Remove the order from the system after successful checkout.
+                orders.erase(orders.begin() + i);
 
                 delete payment;
             }
