@@ -37,20 +37,6 @@ int main() {
             shop.getMenu().showMenu();
 
         } else if(choice == 2) {
-            string name, phoneNumber;
-
-            cout << "Enter your name: ";
-            cin >> name;
-            cout << "Enter phone number (press - to skip): ";
-            cin >> phoneNumber;
-
-            Customer customer(name); 
-
-            if (phoneNumber != "-") {
-                customer = Customer(name, phoneNumber);  // if user does not skip by clicking - , add the phone number user typed
-            }
-
-            Order newOrder(customer);    // add customer order
             
             JuiceBuilder juiceBuilder;
 
@@ -58,9 +44,6 @@ int main() {
             cout << "Enter the name of your custom juice: ";
             cin >> customJuiceName;
 
-            char size;
-            cout << "Size (S/M/L) or (s/m/l): ";
-            cin >> size;
             
             while(true) {
                 juiceBuilder.showAvailableIngredients();
@@ -84,9 +67,7 @@ int main() {
             // must add try and catch handle error if custom juice without ingredients
             Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
 
-            newOrder.addJuiceToOrder(custom, size);
-
-            shop.createOrder(newOrder);
+            shop.getMenu.addJuice(custom);
             
         }  else if(choice == 3) {
             
