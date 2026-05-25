@@ -57,3 +57,8 @@ Juice Menu::getJuice(string name) {
     throw invalid_argument("Juice name not found.");
     
 }
+
+
+Juice getJuiceUsingIndex(int index) {
+    return availableJuices[index-1];
+}
