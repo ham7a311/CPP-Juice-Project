@@ -2,6 +2,14 @@
 
 // Constructor
 Employee::Employee(string ID, string n, string phone, string r) : Person(n, phone) {
+    if (ID == "") {
+        throw invalid_argument("Employee ID cannot be empty.");
+    }
+
+    if (r == "") {
+        throw invalid_argument("Employee role cannot be empty.");
+    }
+
     employeeID = ID;
     role = r;
 }

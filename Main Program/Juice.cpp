@@ -3,8 +3,16 @@
 
 //Constructor
 Juice::Juice(string juiceName, double basePrice) {
-            this->basePrice = basePrice;
-            this->juiceName = juiceName;
+    if (juiceName == "") {
+        throw invalid_argument("Juice name cannot be empty.");
+    }
+
+    if (basePrice <= 0) {
+        throw invalid_argument("Base price must be greater than zero.");
+    }
+
+    this->basePrice = basePrice;
+    this->juiceName = juiceName;
 }
 
 

@@ -2,9 +2,13 @@
 
 
 // Constructor
-Person::Person(string n, string phone){
+Person::Person(string n, string phone) {
+    if (n == "") {
+        throw invalid_argument("Name cannot be empty.");
+    }
+
     name = n;
-    phoneNumber = phone;   
+    phoneNumber = phone;
 }
 
 
