@@ -102,8 +102,10 @@ int main() {
                  newOrder.addJuiceToOrder(custom, size);
     
                  shop.createOrder(newOrder);
+                 cout << "Custom Juice Order placed successfully" << endl;
             } catch (const exception& e) {
-                 cout << e.what();
+                 cout << e.what() << endl;
+                 cout << "Custom Juice Order Failed" << endl;
             }
             
             
@@ -148,7 +150,8 @@ int main() {
                 cin >> juiceNumberChoice;
 
                 if(juiceNumberChoice < 1 || juiceNumberChoice > shop.getMenu().size()) {
-                    cout << "Invalid juice number\n";
+                    cout << "Invalid juice number, try again\n";
+                    i--; // go one iteration behind to ask the user again
                     continue;
                 }
 
@@ -174,6 +177,7 @@ int main() {
             }
 
             shop.createOrder(newOrder);
+            cout << "Order placed successfully" << endl;
 
         } else if (choice == 4) {
             shop.displayOrders();
