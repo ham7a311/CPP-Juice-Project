@@ -30,3 +30,7 @@ void Person::setName(string n){
 void Person::setPhoneNumber(string phone){
     phoneNumber = phone;
 }
+
+// Destructor
+Person::~Person() {
+}
