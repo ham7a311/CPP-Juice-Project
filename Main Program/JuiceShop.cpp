@@ -104,6 +104,10 @@ void JuiceShop::checkoutOrder(int id) {
 
 
 Employee JuiceShop::getRandomEmployee(){
+   if ( employees.empty()) {
+        throw runtime_error("No employees available.");
+    }
+   
    int index = rand() % employees.size();
    return employees[index];
 }
