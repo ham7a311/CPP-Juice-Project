@@ -41,3 +41,14 @@ void Menu::searchJuice(string name){
     }
     cout << "Juice not found!!" << endl;
 }
+
+
+
+string Menu::getJuiceName(string name) {
+    for(auto juice: availableJuices) {
+        if(juice == name) {
+            return juice;
+        }
+    }
+    
+}
