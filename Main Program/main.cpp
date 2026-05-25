@@ -80,7 +80,7 @@ int main() {
                     break; // break the loop when user enter -1
                 }
 
-                if (ingredient >= 1 && ingredient <= juiceBuilder.getAvailableSize()) {
+                if (ingredient >= 1 && ingredient <= juiceBuilder.getSize()) {
                     string ingerdientName = juiceBuilder.getIngredientUsingIndex(ingredient);
                     juiceBuilder.addIngredient(ingerdientName);
                     }
