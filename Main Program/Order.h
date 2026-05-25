@@ -9,6 +9,8 @@
 #include <string>
 using namespace std;
 
+
+class OrderReport;
 class Order {
 private:
 
@@ -21,6 +23,7 @@ private:
         string status;      // "pending" / "completed"
 
 public:
+    friend class OrderReport;
     Order(Customer c);
     void addJuiceToOrder(Juice j, char size);
     double calculateTotal();
