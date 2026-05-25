@@ -9,7 +9,7 @@ using namespace std;
 // Menu class to manage a collection of juice objs available for sale.
 class Menu{
     private:
-        vector<Juice> availableJuice;          //Dynamic list to store the different juice objects.
+        vector<Juice> availableJuices;          //Dynamic list to store the different juice objects.
 
     public:
         // A fucntion to print the menu
