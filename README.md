@@ -283,6 +283,8 @@ For example:
 
 # ▶️ Try It Yourself
 
+### In your Terminal: 
+
 ## 1. Clone the repository
 ```bash
 git clone https://github.com/ham7a311/CPP-Juice-Project.git
