@@ -124,6 +124,9 @@ int main() {
 
             Order newOrder(customer);    // add customer order
 
+            cout << "-------- Select juices from the menu below ---------" << endl;
+            shop.getMenu().showMenu(); 
+
             int count;
             cout << "Enter how many juices you want: ";
             cin >> count;
