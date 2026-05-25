@@ -81,9 +81,11 @@ int main() {
                 }
 
                 if (ingredient >= 1 && ingredient <= juiceBuilder.getSize()) {
-                    string ingerdientName = juiceBuilder.getIngredientUsingIndex(ingredient);
-                    juiceBuilder.addIngredient(ingerdientName);
-                    }
+                    string ingredientName = juiceBuilder.getIngredientUsingIndex(ingredient);
+                    juiceBuilder.addIngredient(ingredientName);
+                } else {
+                    cout << "Invalid ingredient number" << endl;
+                }
 
 
                 juiceBuilder.displayCustomMix();
@@ -103,6 +105,7 @@ int main() {
     
                  shop.createOrder(newOrder);
                  cout << "Custom Juice Order placed successfully" << endl;
+                 newOrder.showOrderDetails();
             } catch (const exception& e) {
                  cout << e.what() << endl;
                  cout << "Custom Juice Order Failed" << endl;
@@ -180,6 +183,7 @@ int main() {
 
             shop.createOrder(newOrder);
             cout << "Order placed successfully" << endl;
+            newOrder.showOrderDetails();
 
         } else if (choice == 4) {
             shop.displayOrders();
