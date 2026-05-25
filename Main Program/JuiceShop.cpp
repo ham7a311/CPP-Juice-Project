@@ -100,3 +100,10 @@ void JuiceShop::checkoutOrder(int id) {
 
     cout << "Order not found." << endl;
 }
+
+
+
+Employee JuiceShop::getRandomEmployee(){
+   int index = rand() % employees.size();
+   return employees[index];
+}
