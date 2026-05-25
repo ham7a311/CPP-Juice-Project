@@ -96,10 +96,10 @@ int main() {
                 // print this for every count
                 // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here of how many number of juices user can order)
                 
-                string juiceNumberChoice;
+                int juiceNumberChoice;
                 char size;
 
-                cout << "Juice name: ";
+                cout << "Juice number: ";
                 cin >> juiceNumberChoice;
 
                 cout << "Size (S/M/L) or (s/m/l): ";
@@ -110,7 +110,7 @@ int main() {
                 
                 double handleInvalidSize = juice.calculatePrice(size);    
 
-                if(handleInvalidSize = -1) {
+                if(handleInvalidSize == -1) {
                     // handle when size = -1 (this must print to user that he typed an inavlid size
                    // ask user for size again
                 }
@@ -125,7 +125,7 @@ int main() {
             shop.createOrder(newOrder);
 
         } else if (choice == 4) {
-            chop.displayOrders();
+            shop.displayOrders();
         } else if (choice == 5) {
             
             int id;
