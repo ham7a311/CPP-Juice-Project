@@ -151,7 +151,7 @@ int main() {
 
                 // users enters the number next to the juice, and we find the juice name by looping through the vector and finding vector[juicNumberChoice-1]
                 // we should handle invalid number by the user as well
-                Juice juice = shop.getMenu().getJuiceByIndex(juiceNumberChoice);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it price
+                Juice juice = shop.getMenu().getJuiceUsingIndex(juiceNumberChoice);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it price
                 
                 double handleInvalidSize = juice.calculatePrice(size);    
 
