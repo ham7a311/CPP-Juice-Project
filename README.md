@@ -283,9 +283,23 @@ For example:
 
 # ▶️ Try It Yourself
 
+## 1. Clone the repository
 ```bash
 git clone https://github.com/ham7a311/CPP-Juice-Project.git
+```
+## 2. cd to Project folder
+```bash
 cd CPP-Juice-Project
+```
+## 3. cd to Folder that includes the code
+```bash
 cd "Main Program"
+```
+## 4. Compile using C++20 features
+```bash
 clang++ -std=c++20 *.cpp -o main
+```
+## 5. Run the file
+```bash
 ./main
+```
