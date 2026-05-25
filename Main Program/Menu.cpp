@@ -14,15 +14,15 @@ void Menu::showMenu() const {
 
 
 void Menu::addJuice(Juice j){
-    availableJuice.push_back(j);
+    availableJuices.push_back(j);
 }
 
 
 
 void Menu::removeJuice(string name){
-    for(int i = 0; i < availableJuice.size(); i++){
-                if(availableJuice[i] == name){
-                    availableJuice.erase(availableJuice.begin() + i);
+    for(int i = 0; i < availableJuices.size(); i++){
+                if(availableJuices[i] == name){
+                    availableJuices.erase(availableJuices.begin() + i);
                     cout << "Juice deleted." << endl; 
                     return;
                 }
@@ -34,10 +34,10 @@ void Menu::removeJuice(string name){
 
 
 void Menu::searchJuice(string name){
-    for(int i = 0; i < availableJuice.size(); i++){
-                if(availableJuice[i] == name){
+    for(int i = 0; i < availableJuices.size(); i++){
+                if(availableJuices[i] == name){
                     cout << "Juice found." << endl;
-                    availableJuice[i].displayJuiceInfo();
+                    availableJuices[i].displayJuiceInfo();
                     return;
                 }
     }
@@ -60,5 +60,8 @@ Juice Menu::getJuice(string name) {
 
 
 Juice getJuiceUsingIndex(int index) {
+    if (index < 1 || index > availableJuices.size() {
+        throw invalid_argument("Invalid Juice selection, there is no juice with that number");
+    }
     return availableJuices[index-1];
 }
