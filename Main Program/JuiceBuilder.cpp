@@ -106,6 +106,6 @@ int JuiceBuilder::getSize() const {
 }
 
 
-string JuiceBuilder::getIngredientByIndex(int index) const {
+string JuiceBuilder::getIngredientUsingIndex(int index) const {
     return availableIngredients[index - 1];
 }
