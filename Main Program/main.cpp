@@ -91,6 +91,10 @@ int main() {
             // must add try and catch handle error if custom juice without ingredients
             Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
 
+             char size;
+             cout << "Size of Custom Juice (S/M/L) or (s/m/l): ";
+             cin >> size;
+
             newOrder.addJuiceToOrder(custom, size);
 
             shop.createOrder(newOrder);
