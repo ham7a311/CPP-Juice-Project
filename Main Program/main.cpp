@@ -43,7 +43,7 @@ int main() {
                 juiceBuilder.showAvailableIngredients();
                 
                 string ingerdient;
-                cout << "Enter ingredients (enter "-" to finish your custom juice: ";
+                cout << "Enter ingredients (enter '-' to finish your custom juice: ";
                 cin >> ingredient;
 
                 if(ingredient == "-") {
@@ -56,18 +56,13 @@ int main() {
                 cout << "Enter the name of your custom juice: ";
                 cin >> customJuiceName;
 
-                // handle error if custom juice without ingredients
-                try {
-                    
-                } catch () {
-                    
-                }
-                
-            }
+                // must add try and catch handle error if custom juice without ingredients
+                Juice custom = juiceBuilder.createCustomJuice(customJuiceName);
 
 
             juiceBuilder.displayCustomMix();
                 
+          }
         }  else if(choice == 3) {
             
             string name, phoneNumber;
@@ -140,7 +135,7 @@ int main() {
             cout << "Exiting the system";
             break; // break/exit the loop
         } else {
-            cout << "Invalid choice, enter a a number from 1 to 4 only" << endl;
+            cout << "Invalid choice, enter a a number from 1 to 6 only" << endl;
         }
     }
 
