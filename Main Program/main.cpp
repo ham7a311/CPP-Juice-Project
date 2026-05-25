@@ -155,7 +155,7 @@ int main() {
                 
                 double handleInvalidSize = juice.calculatePrice(size);    
 
-                if(handleInvalidSize == -1) {
+                while (handleInvalidSize == -1) {
                     // handle when size = -1 (this must print to user that he typed an inavlid size
                    // ask user for size again
                     cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
