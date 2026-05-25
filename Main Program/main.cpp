@@ -169,6 +169,8 @@ int main() {
                    // ask user for size again
                     cout << "Invalid size, enter Size (S/M/L) or (s/m/l): ";
                     cin >> size;
+
+                    handleInvalidSize = juice.calculatePrice(size); // avoid infinte loop if size is wrong again
                 }
 
                 newOrder.addJuiceToOrder(juice, size);
