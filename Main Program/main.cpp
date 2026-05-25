@@ -33,9 +33,39 @@ int main() {
             shop.getMenu().showMenu();
 
         } else if(choice == 2) {
-            // we should implement JuiceBuilder funcionality here
-            cout << "not ready yet";    // print a fixed text for now because its not ready yet, but this should be changed
-            
+            JuiceBuilder juiceBuilder;
+
+            int ingerdientNumber;
+
+            while(true) {
+                juiceBuilder.showAvailableIngredients();
+                
+                string ingerdient;
+                cout << "Enter ingredients (enter "-" to finish your custom juice: ";
+                cin >> ingredient;
+
+                if(ingredient == "-") {
+                    break; // break the loop when user enter "-", we used "-" instead of '-' because its a string not char
+                }
+
+                juiceBuilder.addIngredient(ingredient);
+
+                string customJuiceName;
+                cout << "Enter the name of your custom juice: ";
+                cin >> customJuiceName;
+
+                // handle error if custom juice without ingredients
+                try {
+                    
+                } catch () {
+                    
+                }
+                
+            }
+
+
+            juiceBuilder.displayCustomMix();
+                
         }  else if(choice == 3) {
             
             string name, phoneNumber;
@@ -51,7 +81,7 @@ int main() {
                 customer = Customer(name, phoneNumber);  // if user does not skip by clicking - , add the phone number user typed
             }
 
-            Order newOrder(customer);
+            Order newOrder(customer);    // add customer order
 
             int count;
             cout << "Enter how many juices you want: ";
@@ -65,7 +95,7 @@ int main() {
             for (int i = 0; i < count; i++) {
 
                 // print this for every count
-                // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here)
+                // if count = 2 this whole loop will be printed 2 times, and so on (might need a limit here of how many number of juices user can order)
                 
                 string juiceName;
                 char size;
@@ -76,9 +106,18 @@ int main() {
                 cout << "Size (S/M/L) or (s/m/l): ";
                 cin >> size;
 
-                Juice juice = shop.getMenu.getJuice(juiceName);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it prize
-                newOrder.addJuiceToOrder(juice);
+                Juice juice = shop.getMenu().getJuice(juiceName);    // use the function that returns a juice object from Menu.cpp, juice now will include both name of juice and it prize
+                
+                double handleInvalidSize = juice.calculatePrice(size);    
 
+                if(handleInvalidSize = -1) {
+                    // handle when size = -1 (this must print to user that he typed an inavlid size
+                   // ask user for size again
+                }
+
+                newOrder.addJuiceToOrder(juice, size);
+
+                
                 
                 
             }
