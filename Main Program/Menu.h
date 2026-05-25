@@ -33,7 +33,7 @@ class Menu{
         Juice getJuice(string name);
 
         // user will enter the number next to the juice for example 1. Mango, user enters 1, we loop through the vector[choice-1] (-1 because there is no choice for 0), and find the juice
-        Juice getJuiceUsingIndex(int index)
+        Juice getJuiceUsingIndex(int index);
 };
 
 
