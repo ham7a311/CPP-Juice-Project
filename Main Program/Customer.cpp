@@ -13,7 +13,7 @@ int Customer::getCustomerID() const {
 // Place order
 void Customer::placeOrder() const {
     cout << "Order placed by: " << name << endl;
-    cout << "Order received!" << endl;
+    cout << "Order received :) " << endl;
 }
 
 // Override display function from Person
